@@ -37,7 +37,7 @@ $email = $_POST['email'];
 $state = $_POST['state'];
 $msg = $_POST['msg'];
   
-  $emailenviar = "rsfreelas@gmail.com.com.br";
+  $emailenviar = "rsfreelas@gmail.com";
   $destino = $emailenviar;
   $assunto = "Contato pelo Site";
 
