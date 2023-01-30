@@ -29,8 +29,8 @@
       								<div class="row">
       									<div class="form-group col">
 
-      										<select class="form-select" name="state" aria-label="Default select example">
-														<option value="0" selected>Selecione seu Estado</option>
+      										<select class="form-select" name="state" aria-label="Default select example" required>
+														<option value="" selected>Selecione seu Estado</option>
       											<option value="Acre">Acre</option>
       											<option value="Alagoas">Alagoas</option>
       											<option value="Amapá">Amapá</option>
@@ -145,8 +145,8 @@
 											<div class="form-group col-lg-6">
 
 
-												<select class="form-select" name="state" aria-label="Default select example">
-													<option value="0" selected>Selecione o seu Estado</option>
+												<select class="form-select" name="state" aria-label="Default select example" required>
+													<option value="" selected>Selecione o seu Estado</option>
 													<option value="1">Acre</option>
 													<option value="2">Alagoas</option>
 													<option value="3">Amapá</option>
@@ -179,8 +179,8 @@
 
 											</div>
 										<div class="form-group col-lg-6">
-												<select class="form-select" name="network_type" aria-label="Default select example">
-													<option selected>Tipo da Rede</option>
+												<select class="form-select" name="network_type" aria-label="Default select example" required>
+													<option value="" selected>Tipo da Rede</option>
 													<option value="0">Padrão</option>
 													<option value="1">Monofásico</option>
 													<option value="2">Bifásico</option>
@@ -191,8 +191,8 @@
 
 										<div class="form-group col">
 
-											<select class="form-select" name="local" aria-label="Default select example">
-												<option selected>Local</option>
+											<select class="form-select" name="local" aria-label="Default select example" required>
+												<option value="" selected >Local</option>
 												<option value="1">Residencial</option>
 												<option value="2">Comercial</option>
 												<option value="3">Industrial</option>
