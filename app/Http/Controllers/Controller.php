@@ -392,10 +392,7 @@ ul.social li{
             				<p>Nome:'.$name.'</p><br>
 							<p>E-mail:'.$email.'</p><br>
 							<p>Telefone:'.$phone.'</p><br>
-              <p>Estado:'.$state.'</p><br>
-              <p>Estado:'.$state.'</p><br>
               <p>Data:'.$data_envio.'</p><br>
-              <p>Hora:'.$hora_envio.'</p><br>
             			</div>
             		</td>
             	</tr>
