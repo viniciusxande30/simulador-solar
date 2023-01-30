@@ -23,13 +23,13 @@
 
                           </li>
                                                     <li class="dropdown">
-                            <a class="dropdown-item " href="#por-que-investir">
+                            <a class="dropdown-item " href="{{url('/')}}/#por-que-investir">
                               Por que Investir?
                             </a>
 
                           </li>
                                                     <li class="dropdown">
-                            <a class="dropdown-item " href="#simulador">
+                            <a class="dropdown-item " href="{{url('/')}}/simulador">
                              Faça sua Simulação
                             </a>
 

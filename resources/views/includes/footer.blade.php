@@ -4,10 +4,9 @@
       <div class="col">
         <ul class="list list-unstyled list-inline d-flex align-items-center justify-content-center flex-column flex-lg-row mb-0">
           <li class="list-inline-item custom-text-color-1 color-inherit mb-lg-0 text-2 pe-2">Alguns de Nossos Links</li>
-          <li class="list-inline-item mb-lg-0"><a href="" style="background-color:#F7941D" class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Página Inicial</a></li>
-          <li class="list-inline-item mb-lg-0"><a href="" style="background-color:#F7941D"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Sobre Nós</a></li>
-          <li class="list-inline-item mb-lg-0"><a href="" style="background-color:#F7941D"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Mantenha Contato</a></li>
-          <li class="list-inline-item mb-lg-0"><a href="" style="background-color:#F7941D"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Políticas de Privacidade</a></li>
+          <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}" style="background-color:#F7941D" class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Página Inicial</a></li>
+          <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}/#por-que-investir" style="background-color:#F7941D"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Por que Investir?</a></li>
+		  <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}/#simulador" style="background-color:#F7941D"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0" target="_blank">Faça Sua Simulação</a></li>
         </ul>
       </div>
     </div>
@@ -28,7 +27,7 @@
 				</div>
 				<div class="copyright bg-dark py-4">
 					<div class="container text-center py-2">
-						<p class="mb-0 text-2">Copyright 2022 Um Tudo Só - Todos os Direitos Reservados</p>
+						<p class="mb-0 text-2">Copyright 2023 Um Tudo Só - Todos os Direitos Reservados</p>
 					</div>
 				</div>
 			</footer>
