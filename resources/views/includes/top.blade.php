@@ -29,7 +29,7 @@
 
                           </li>
                                                     <li class="dropdown">
-                            <a class="dropdown-item " href="{{url('/')}}/simulador">
+                            <a class="dropdown-item " href="{{url('/')}}/#simulador">
                              Faça sua Simulação
                             </a>
 
