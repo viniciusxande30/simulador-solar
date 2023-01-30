@@ -53,6 +53,9 @@ $msg = $_POST['msg'];
   $mgm = "ERRO AO ENVIAR E-MAIL!";
   echo "";
   }
-    return redirect()->route('sendQuotation');
+    return redirect()->route('quotationSend');
     }
+  public function quotationSend(){
+    return view('quotation-send');
+  }
 }
