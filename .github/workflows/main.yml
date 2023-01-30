@@ -17,6 +17,6 @@ jobs:
         server: ${{ secrets.ftp_host }}
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
-        server-dir: simulador-solar.rsweb.com.br/
+        server-dir: /
         exclude: |
           **/vendor/**
