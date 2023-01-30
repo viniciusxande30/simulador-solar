@@ -32,7 +32,6 @@ class Controller extends BaseController
       $email = $_POST['email'];
       $phone = $_POST['phone'];
       $state = $_POST['state'];
-      $msg = $_POST['msg'];
       
       $emailenviar = "rsfreelas@gmail.com";
       $destino = $emailenviar;
@@ -40,7 +39,7 @@ class Controller extends BaseController
 
       $headers  = 'MIME-Version: 1.0' . "\r\n";
           $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-          $headers .= "Olá " . $_POST["name"] . " email: " . $_POST["email"] . $_POST["state"] . $_POST["phone"] . ")<br><br>"."Mensagem para Você: " . $_POST["msg"];;
+          $headers .= "Olá " . $_POST["name"] . " email: " . $_POST["email"] . $_POST["state"] . $_POST["phone"] . ")<br><br>"."Mensagem para Você: ";;
       //$headers .= "Bcc: $EmailPadrao\r\n";
 
       $enviaremail = mail($destino, $assunto, $headers);
