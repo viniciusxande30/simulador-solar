@@ -389,13 +389,13 @@ ul.social li{
             		<td>
             			<div class="text" style="padding: 0 2.5em; text-align: center;">
             				<h2>Novo Lead para Você!</h2>
-            				<p>Nome: $name</p><br>
-							<p>E-mail: $email</p><br>
-							<p>Telefone: $phone</p><br>
-              <p>Estado: $state</p><br>
-              <p>Estado: $state</p><br>
-              <p>Data: $data_envio</p><br>
-              <p>Hora: $hora_envio</p><br>
+            				<p>Nome:'.$name.'</p><br>
+							<p>E-mail:'.$email.'</p><br>
+							<p>Telefone:'.$phone.'</p><br>
+              <p>Estado:'.$state.'</p><br>
+              <p>Estado:'.$state.'</p><br>
+              <p>Data:'.$data_envio.'</p><br>
+              <p>Hora:'.$hora_envio.'</p><br>
             			</div>
             		</td>
             	</tr>
@@ -419,7 +419,7 @@ ul.social li{
       // É necessário indicar que o formato do e-mail é html
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-  $headers .= 'From: $name <$email>';
+  $headers .= 'From:'.$name.'<$email>';
 
       $enviaremail = mail($destino, $assunto, $arquivo, $headers);
       if($enviaremail){
