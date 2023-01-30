@@ -16,7 +16,7 @@
 
 			<footer id="footer" class="bg-color-dark-scale-2 border border-end-0 border-start-0 border-bottom-0 border-color-light-3 mt-0">
 				<div class="container text-center my-3 py-5">
-					<a href="index.html">
+					<a href="https://umtudoso.com.br">
 						<img src="img/lazy.png" data-src="img/umtudoso.webp" width="200" class="mb-4 appear-animation lazyload" alt="Porto" data-appear-animation="fadeIn" data-appear-animation-delay="300">
 					</a>
 					<p class="text-4 mb-4">Faça sua Cotação Totalmente Gratuita, Aproveite!</p>
