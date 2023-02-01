@@ -441,10 +441,12 @@ ul.social li{
     public function cotacao(){
             //Variáveis
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$state = $_POST['state'];
-$msg = $_POST['msg'];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $state = $_POST['state'];
+  $aquisition = $_POST['aquisition'];
+  $average_value = $_POST['average_value'];
+  $terms = $_POST['terms'];
   
   $emailenviar = "rsfreelas@gmail.com";
   $destino = $emailenviar;
@@ -452,7 +454,7 @@ $msg = $_POST['msg'];
 
   $headers  = 'MIME-Version: 1.0' . "\r\n";
       $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $headers .= "Olá " . $_POST["name"] . " email: " . $_POST["email"] . $_POST["state"] . ")<br><br>"."Mensagem para Você: " . $_POST["msg"];;
+      $headers .= "Olá " . $_POST["name"] . " E-mail: " . $_POST["email"] . "Estado: " . $_POST["state"] . "Aquisição: " . $_POST['aquisition']. "Valor Médio: " . $_POST['average_value'] .")<br><br>"."Política de Privacidade: " . $_POST["terms"];;
   //$headers .= "Bcc: $EmailPadrao\r\n";
 
   $enviaremail = mail($destino, $assunto, $headers);

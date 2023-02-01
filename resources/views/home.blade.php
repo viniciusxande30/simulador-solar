@@ -63,9 +63,33 @@
       									</div>
       								</div>
       								<div class="row">
-      									<div class="form-group col">
-      										<textarea maxlength="5000" placeholder="Digite Sua Mensagem"  data-msg-required="Please enter your message." rows="2" class="form-control text-3 h-auto py-2" name="msg" required=""></textarea>
+      									<div class="form-group col-12">
+										  	<select class="form-select" name="aquisition" required>
+												<option value="" selected>Em quanto tempo pretende adquirir a Usina Solar?</option>
+												<option value="1" >Imediatamente</option>
+												<option value="2" >Em até 1 mês</option>
+												<option value="3" >Entre 3 e 6 meses</option>
+												<option value="4" >Acima de 6 meses</option>
+												<option value="5" >Ainda não decidi</option>
+											</select>
+
       									</div>
+										  <div class="form-group col-12">
+										  <select class="form-select" name="average_value" required>
+										  		<option value="" selected>Valor médio da conta de luz (em R$)</option>
+										  		<option value="1" >R$ 300 a R$ 500</option>
+												<option value="2" >R$ 600 a R$ 800</option>
+												<option value="3" >R$ 900 a R$ 1.000</option>
+												<option value="4" >Acima de R$ 1.000</option>
+
+											</select>
+											
+											</div>
+											<div class="form-group col-12">
+												<input  type ="checkbox" name="terms" value="Termo_Aceito" required>
+												<label>Eu concordo em receber comunicações. Ao informar meus dados, eu concordo com a <a href="https://umtudoso.com.br/politica-de-privacidade/" target="_BLANK">Política de Privacidade.</a> </label>
+											</div>
+
       								</div>
       								<div class="row">
       									<div class="form-group col">
@@ -89,8 +113,8 @@
 						<div class="container pt-4">
 							<div class="row align-items-center justify-content-between">
 								<div class="col-lg-4">
-									<h2 class="text-7 font-weight-semibold line-height-2 mb-2">Invista em Energia Solar Faça sua Simulação Gratuita</h2>
-									<p>Tenha menos gastos com energia elétrica, conheça a nova forma de energia solar que está revolucionando o Brasil.</p>
+									<h2 class="text-7 font-weight-semibold line-height-2 mb-2">Faça uma simulação e receba cotações das melhores empresas parceiras </h2>
+									<p>Faça uma simulação e tenha uma estimativa de quanto você pode economizar e qual o payback do seu investimento.</p>
 								</div>
 								<div class="col-sm-4 col-lg-auto icon-box text-center mb-4">
 									<i class="icon-bg icon-1"></i>
@@ -105,7 +129,7 @@
 									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0">Controle seus<br> Gastos</h4>
 								</div>
 
-								<div class="col-lg-8 offset-lg-2 px-lg-0 text-center">
+								<div class="col-lg-8 offset-lg-4 px-lg-0 text-left">
 									<p class="text-4">Confira as Melhores Vantagens em Investir em Energia Solar. Faça sua Simulação Gratuita.</p>
 								</div>
 							</div>
