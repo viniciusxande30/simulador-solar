@@ -9,7 +9,7 @@
 }
 
 :root {
-	--primary: #F7941D;
+	--primary: #E7BE17;
 	--secondary: #e36159;
 	--tertiary: #2BAAB1;
 	--quaternary: #383f48;
@@ -33,7 +33,7 @@ a:active {
 
 html .text-color-primary,
 html .text-primary {
-	color: #F7941D !important;
+	color: #E7BE17 !important;
 }
 
 html .text-color-hover-primary:hover,

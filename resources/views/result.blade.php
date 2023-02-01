@@ -13,32 +13,33 @@ $irradiacao_solar_media = 4.48;
 $placa_padrao = 405;
 $media_kw =[
   0 => 0,
-  1 => 0.50,
-  2 => 0.60,
-  3 => 0.70,
-  4 => 0.50,
-  5 => 0.60,
+  1 => 0.73,
+  2 => 0.75,
+  3 => 0.83,
+  4 => 0.72,
+  5 => 0.74,
   6 => 0.70,
-  7 => 0.70,
-  8 => 0.50,
-  9 => 0.60,
-  10 => 0.70,
-  11 => 0.50,
-  12 => 0.60,
-  13 => 0.70,
-  14 => 0.50,
-  15 => 0.60,
+  7 => 0.76,
+  8 => 0.71,
+  9 => 0.67,
+  10 => 0.65,
+  11 => 0.69,
+  12 => 0.80,
+  13 => 0.81,
+  14 => 0.87,
+  15 => 0.56,
   16 => 0.70,
-  17 => 0.50,
-  18 => 0.60,
-  19 => 0.70,
-  20 => 0.70,
-  21=> 0.50,
-  22=> 0.60,
-  23 => 0.70,
-  24 => 0.50,
-  25 => 0.60,
-  26 => 0.70
+  17 => 0.74,
+  18 => 0.57,
+  19 => 1.03,
+  20 => 0.66,
+  21=> 0.65,
+  22=> 0.73,
+  23 => 0.64,
+  24 => 0.62,
+  25 => 0.73,
+  26 => 0.70,
+  27 => 0.69
 ];
 $tipo_da_rede =[
   0 => 0,
@@ -172,7 +173,7 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 								  <div class="row align-items-center text-center">
 <div class="card col-md-6">
   <div class="card-body">
-  <i class="fa-solid fa-plug-circle-bolt"  style="font-size: 60px;color:#F7941D"></i>
+  <i class="fa-solid fa-plug-circle-bolt"  style="font-size: 60px;color:#E7BE17"></i>
 	<p class="card-text" style="color:black">{{number_format($potencia_nominal);}} KWp</p>
 	<h5 class="card-title" style="color:black">Potência Nominal</h5>
 
@@ -181,7 +182,7 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 
 <div class="card col-md-6">
   <div class="card-body">
-  <i class="fa-solid fa-solar-panel" style="font-size: 60px;color:#F7941D"></i>
+  <i class="fa-solid fa-solar-panel" style="font-size: 60px;color:#E7BE17"></i>
 	<p class="card-text" style="color:black">{{intval($numero_de_placas)}} Módulos</p>
 	<h5 class="card-title" style="color:black">Número de Placas</h5>
 
@@ -208,7 +209,7 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 
         <div class="card col-md-4">
           <div class="card-body">
-          <i class="fa fa-bolt"  style="font-size: 60px;color:#F7941D"></i>
+          <i class="fa fa-bolt"  style="font-size: 60px;color:#E7BE17"></i>
             <h5 class="card-title">Custo em Kw com a Instalação R${{number_format($custo_por_kwh_instalacao,2)}}/kWh</h5>
             <p class="card-text">Sem a Instalação o Custo em kWh fica em {{number_format($media_kw_state,2)}}/KWH</p>
 
@@ -217,7 +218,7 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 
         <div class="card col-md-4">
           <div class="card-body">
-          <i class="fa fa-line-chart"  style="font-size: 60px;color:#F7941D"></i>
+          <i class="fa fa-line-chart"  style="font-size: 60px;color:#E7BE17"></i>
             <h5 class="card-title">Taxa de Retorno Em {{number_format($taxa_de_retorno,2)}}% ao Ano</h5>
             <p class="card-text">A taxa SELIC Atualmente está em 13,75% ao Ano<br>Já a Poupança está em 6,17% ao Ano</p><br>
 
@@ -228,7 +229,7 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 
         <div class="card col-md-4">
           <div class="card-body">
-          <i class="fa fa-rocket"  style="font-size: 60px;color:#F7941D"></i>
+          <i class="fa fa-rocket"  style="font-size: 60px;color:#E7BE17"></i>
             <h5 class="card-title">Payback em {{number_format($payback,2)}} Anos</h5>
             <p class="card-text">Tempo Aproximado de Retorno Sobre o Investimento</p>
 
@@ -244,7 +245,7 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 
 
 <section class="section section-no-border section-angled bg-color-light-scale-1 m-0" id="simulador">
-<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #F7941D;"></div>
+<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #E7BE17;"></div>
   <div class="container py-5 my-5">
   <h2 class="font-weight-bold text-9 mb-1 text-center"style="padding-top:-50px;padding-bottom:50px">Sua Conta de Energia para os Próximos Meses</h2>
 

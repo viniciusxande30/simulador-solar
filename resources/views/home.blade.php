@@ -115,7 +115,7 @@
 
 
 					<section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
-						<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #F7941D;"></div>
+						<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #E7BE17;"></div>
 						<div class="container py-5 my-5">
 							<div class="row align-items-center text-center my-5">
 								<div class="col-md-6">
