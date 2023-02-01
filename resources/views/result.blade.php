@@ -292,18 +292,18 @@ CO2 = (Potencia Produzida * 12 * 0,1258)/1000
 							<div class="row align-items-center mb-5">
 								<div class="col-lg-6 pe-xl-5 mb-5 mb-lg-0">
 									<h2 class="font-weight-bold text-9 mb-1">Sustentabilidade com Energia Limpa</h2>
-									<h5 class="font-weight-semibold positive-ls-2 text-4 text-primary mb-3">Adquirindo energia solar você também ajuda o meio ambiente!</h5>
+									<h5 class="font-weight-semibold positive-ls-2 text-4 text-primary mb-3" style="color:#F7941D !important">Adquirindo energia solar você também ajuda o meio ambiente!</h5>
 									<p class="ls-0 text-default fw-400 mb-5">* Os dados são apenas para fins demonstrativos</p>
 									<div class="d-flex align-items-center border border-top-0 border-end-0 border-start-0 pb-4 mb-4">
-										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"></i>
+										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"style="color:#F7941D !important"></i>
 										<p class="mb-0"><b class="text-color-dark">Menos {{number_format($co2,2)}} ton CO2 </b>Na Atmosfera, Graças a Energia Limpa</p>
 									</div>
 									<div class="d-flex align-items-center border border-top-0 border-end-0 border-start-0 pb-4 mb-4">
-										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"></i>
+										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3" style="color:#F7941D !important"></i>
 										<p class="mb-0 mb-0"><b class="text-color-dark">Teremos mais {{number_format($arvores_plantadas,2)}} </b> Árvores Plantadas Equivalentes no Meio Ambiente</p>
 									</div>
 									<div class="d-flex align-items-center pb-4 mb-4">
-										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"></i>
+										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3" style="color:#F7941D !important"></i>
 										<p class="mb-0"><b class="text-color-dark">Menos {{number_format($carvao_reduzido)}} Toneladas de Carvão-</b> em Termoelétricas</p>
 									</div>
 								</div>
