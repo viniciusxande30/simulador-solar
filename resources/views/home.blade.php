@@ -16,18 +16,47 @@
       							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Faça sua Cotação Gratuita!</h2>
       							<p class="mb-4">Faça sua Cotação Cotação Totalmente Gratuita</p>
 
-      							<form class="contact-form" action="{{url('/')}}/enviar-cotacao" method="POST">
+      							<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST">
                       @csrf
       								<div class="row">
-      									<div class="form-group col-lg-6">
+      									<div class="form-group col-lg-12">
       										<input type="text" value="" placeholder="Digite seu Nome" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required="">
       									</div>
+      								</div>
+
+
+									  <div class="row">
       									<div class="form-group col-lg-6">
+												<input type="text" value="" placeholder="Telefone" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="phone" required="">
+											</div>
+
+											<div class="form-group col-lg-6">
       										<input type="email" value="" placeholder="Digite seu E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required="">
       									</div>
+											
       								</div>
       								<div class="row">
-      									<div class="form-group col">
+									  <div class="form-group col-lg-6">
+												<select class="form-select" name="network_type" aria-label="Default select example" required>
+													<option value="" selected>Tipo da Rede</option>
+													<option value="0">Padrão</option>
+													<option value="1">Monofásico</option>
+													<option value="2">Bifásico</option>
+													<option value="3">Trifásico</option>
+												</select>
+										</div>
+										<div class="form-group col">
+
+<select class="form-select" name="local" aria-label="Default select example" required>
+	<option value="" selected >Local</option>
+	<option value="1">Residencial</option>
+	<option value="2">Comercial</option>
+	<option value="3">Industrial</option>
+	<option value="4">Agro</option>
+</select>
+
+</div>
+      									<div class="form-group col-lg-12">
 
       										<select class="form-select" name="state" aria-label="Default select example" required>
 														<option value="" selected>Selecione seu Estado</option>
@@ -66,21 +95,21 @@
       									<div class="form-group col-12">
 										  	<select class="form-select" name="aquisition" required>
 												<option value="" selected>Em quanto tempo pretende adquirir a Usina Solar?</option>
-												<option value="1" >Imediatamente</option>
-												<option value="2" >Em até 1 mês</option>
-												<option value="3" >Entre 3 e 6 meses</option>
-												<option value="4" >Acima de 6 meses</option>
-												<option value="5" >Ainda não decidi</option>
+												<option value="Imediatamente" >Imediatamente</option>
+												<option value="Em até 1 Mês" >Em até 1 mês</option>
+												<option value="Entre 3 e 6 meses" >Entre 3 e 6 meses</option>
+												<option value="Acima de 6 meses" >Acima de 6 meses</option>
+												<option value="Ainda não decidi" >Ainda não decidi</option>
 											</select>
 
       									</div>
 										  <div class="form-group col-12">
-										  <select class="form-select" name="average_value" required>
+										  <select class="form-select" name="price" required>
 										  		<option value="" selected>Valor médio da conta de luz (em R$)</option>
-										  		<option value="1" >R$ 300 a R$ 500</option>
-												<option value="2" >R$ 600 a R$ 800</option>
-												<option value="3" >R$ 900 a R$ 1.000</option>
-												<option value="4" >Acima de R$ 1.000</option>
+										  		<option value="400" >R$ 300 a R$ 500</option>
+												<option value="700" >R$ 600 a R$ 800</option>
+												<option value="950" >R$ 900 a R$ 1.000</option>
+												<option value="1000" >Acima de R$ 1.000</option>
 
 											</select>
 											
@@ -108,6 +137,11 @@
       							</div>
       						</div>
       					</section>
+
+
+						
+
+
 
 					<section class="section section-no-border pb-0 mt-3 mb-0">
 						<div class="container pt-4">
@@ -138,7 +172,10 @@
 					</section>
 
 
+
+
 					<section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
+					
 						<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #E7BE17;"></div>
 						<div class="container py-5 my-5">
 							<div class="row align-items-center text-center my-5">
@@ -244,9 +281,6 @@
 							</div>
 						</div>
 					</section>
-
-
-
 
 					<section id="support" class="section section-angled bg-light border-0 m-0 position-relative pt-0">
 						<div class="container pb-5 pt-5 mb-5"  id="por-que-investir">
