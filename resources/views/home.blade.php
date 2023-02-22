@@ -58,36 +58,36 @@
 </div>
       									<div class="form-group col-lg-12">
 
-      										<select class="form-select" name="state" aria-label="Default select example" required>
-														<option value="" selected>Selecione seu Estado</option>
-      											<option value="Acre">Acre</option>
-      											<option value="Alagoas">Alagoas</option>
-      											<option value="Amapá">Amapá</option>
-      											<option value="Amazonas">Amazonas</option>
-      											<option value="Bahia">Bahia</option>
-      											<option value="Ceará">Ceará</option>
-      											<option value="Espírito Santo">Espírito Santo</option>
-      											<option value="Goiás">Goiás</option>
-      											<option value="Maranhão">Maranhão</option>
-      											<option value="Mato Grosso">Mato Grosso</option>
-      											<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-      											<option value="Minas Gerais">Minas Gerais</option>
-      											<option value="Pará">Pará</option>
-      											<option value="Paraíba">Paraíba</option>
-      											<option value="Paraná">Paraná</option>
-      											<option value="Pernambuco">Pernambuco</option>
-      											<option value="Piauí">Piauí</option>
-      											<option value="Rio de Janeiro">Rio de Janeiro</option>
-      											<option value="Rio Grande do Norte">Rio Grande do Norte</option>
-      											<option value="Rio Grande do Sul">Rio Grande do Sul</option>
-      											<option value="Rondônia">Rondônia</option>
-      											<option value="Roraima">Roraima</option>
-      											<option value="Santa Catarina">Santa Catarina</option>
-      											<option value="São Paulo">São Paulo</option>
-      											<option value="Sergipe">Sergipe</option>
-      											<option value="Tocantins">Tocantins</option>
-      											<option value="Distrito Federal">Distrito Federal</option>
-      										</select>
+										  <select class="form-select" name="state" aria-label="Default select example" required>
+													<option value="" selected>Selecione o seu Estado</option>
+													<option value="1">Acre</option>
+													<option value="2">Alagoas</option>
+													<option value="3">Amapá</option>
+													<option value="4">Amazonas</option>
+													<option value="5">Bahia</option>
+													<option value="6">Ceará</option>
+													<option value="7">Espírito Santo</option>
+													<option value="8">Goiás</option>
+													<option value="9">Maranhão</option>
+													<option value="10">Mato Grosso</option>
+													<option value="11">Mato Grosso do Sul</option>
+													<option value="12">Minas Gerais</option>
+													<option value="13">Pará</option>
+													<option value="14">Paraíba</option>
+													<option value="15">Paraná</option>
+													<option value="16">Pernambuco</option>
+													<option value="17">Piauí</option>
+													<option value="18">Rio de Janeiro</option>
+													<option value="19">Rio Grande do Norte</option>
+													<option value="20">Rio Grande do Sul</option>
+													<option value="21">Rondônia</option>
+													<option value="22">Roraima</option>
+													<option value="23">Santa Catarina</option>
+													<option value="24">São Paulo</option>
+													<option value="25">Sergipe</option>
+													<option value="26">Tocantins</option>
+													<option value="27">Distrito Federal</option>
+												</select>
 
       									</div>
       								</div>
