@@ -531,7 +531,7 @@ ul.social li{
         }
 
         //diretório para salvar as imagens
-        $diretorio = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
+        $diretorio = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
         //Verificar a existência do diretório para salvar as imagens e informa se o caminho é um diretório
         if(!is_dir($diretorio)){ 
             echo "Pasta $diretorio nao existe";
