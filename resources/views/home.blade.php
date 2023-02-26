@@ -234,10 +234,10 @@ $contagem = count($conteudo);
 										
 
 												<div class="col-6 col-md-4 p-0">
-													<a href="{{url('/')}}/images_full/servicos/{{$parte[8]}}">
+													<a href="{{url('/')}}/images_full/servicos/{{$parte[6]}}">
 														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
 															<span class="thumb-info-wrapper">
-																<img src="{{url('/')}}/images_full/servicos/{{$parte[8]}} " class="img-fluid" alt="">
+																<img src="{{url('/')}}/images_full/servicos/{{$parte[6]}} " class="img-fluid" alt="">
 																<span class="thumb-info-action">
 																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
 																</span>
