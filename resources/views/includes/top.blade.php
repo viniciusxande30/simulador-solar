@@ -1,11 +1,7 @@
 <?php
 		//UPAR ESSE COMENTADO
-    if(isset($_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/')){
-      $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
-    }else{
-      $pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
-    }
-
+    
+    $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
 
     //$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
 
