@@ -10,15 +10,12 @@
 		//echo $pasta;
 		$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
     //$parte = explode("/", $arquivos[0]);
-    if(isset($parte)){
       $parte_logo = explode("/", $arquivos[0]);
-    }
+      //echo $parte_logo;
 
     $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
-    if(isset($parte_logo)){
       $parte_logo = explode("/", $arquivos[0]);
-      echo $parte_logo;
-    }
+      //echo $parte_logo;
     //echo $parte[8];
     
 ?>
