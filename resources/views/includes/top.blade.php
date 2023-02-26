@@ -42,7 +42,7 @@ $contagem = count($conteudo);
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte_logo[7]}}" ></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{isset($parte_logo[7])}}" ></a>
                   </div>
                 </div>
               </div>
