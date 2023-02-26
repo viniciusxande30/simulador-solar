@@ -2,6 +2,7 @@
 		//UPAR ESSE COMENTADO
     
     $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
+    $pasta_logo = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/logotipo/';
 
     //$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
 
@@ -9,6 +10,9 @@
 		//echo $pasta;
 		$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
     $parte = explode("/", $arquivos[0]);
+
+    $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+    $parte_logo = explode("/", $arquivos[0]);
     //echo $parte[8];
     
 ?>
@@ -33,7 +37,7 @@ $contagem = count($conteudo);
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte[6]}}" ></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte_logo[7]}}" ></a>
                   </div>
                 </div>
               </div>
