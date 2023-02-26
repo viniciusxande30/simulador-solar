@@ -15,7 +15,7 @@
 
     $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
       $parte_logo = explode("/", $arquivos[0]);
-      echo $parte_logo;
+      echo $parte_logo[7];
     //echo $parte[8];
     
 ?>
