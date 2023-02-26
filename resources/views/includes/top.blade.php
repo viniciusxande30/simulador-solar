@@ -17,6 +17,7 @@
     $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
     if(isset($parte_logo)){
       $parte_logo = explode("/", $arquivos[0]);
+      echo $parte_logo;
     }
     //echo $parte[8];
     
@@ -42,7 +43,7 @@ $contagem = count($conteudo);
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{isset($parte_logo[7])}}" ></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{isset($parte_logo[6])}}" ></a>
                   </div>
                 </div>
               </div>
