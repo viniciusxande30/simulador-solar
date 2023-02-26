@@ -33,14 +33,14 @@ $contagem = count($conteudo);
 @endphp
     
     <div class="body">
-      <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickyChangeLogo': false, 'stickyHeaderContainerHeight': 70}" >
+      <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickyChangeLogo': false, 'stickyHeaderContainerHeight': 70}" style="height:0px !important" >
         <div class="header-body border-top-0 bg-dark box-shadow-none" >
           <div class="header-container container-fluid">
             <div class="header-row p-relative px-0">
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte_logo[7]}}" ></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte_logo[7]}}" style="width:250px" ></a>
                   </div>
                 </div>
               </div>
