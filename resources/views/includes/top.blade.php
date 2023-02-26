@@ -1,5 +1,10 @@
 <?php
-		$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/logotipo/';
+		//UPAR ESSE COMENTADO
+
+    $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
+
+    //$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
+
 
 		//echo $pasta;
 		$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
