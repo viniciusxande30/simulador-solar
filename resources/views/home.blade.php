@@ -15,7 +15,11 @@
       								<div class="col-lg-6" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
       							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Faça sua Cotação Gratuita!</h2>
       							<p class="mb-4">Faça sua Cotação Cotação Totalmente Gratuita</p>
+<<<<<<< HEAD
 <!-- Subir Arquivos teste -->
+=======
+<!-- Subir Arquivos -->
+>>>>>>> 0ee6cac56b3718cdb5a8ab4e316c51af3a0f12f2
       							<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST">
                       @csrf
       								<div class="row">
