@@ -230,7 +230,6 @@ $contagem = count($conteudo);
 												
 												//echo $img;
 											?>
-											<!-- <img src="{{url('/')}}/images_full/servicos/{{$parte[8]}}">; -->
 										
 
 												<div class="col-6 col-md-4 p-0">
