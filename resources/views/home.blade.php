@@ -15,7 +15,7 @@
       								<div class="col-lg-6" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
       							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Faça sua Cotação Gratuita!</h2>
       							<p class="mb-4">Faça sua Cotação Cotação Totalmente Gratuita</p>
-
+<!-- Subir Arquivos teste -->
       							<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST">
                       @csrf
       								<div class="row">
@@ -58,36 +58,36 @@
 </div>
       									<div class="form-group col-lg-12">
 
-      										<select class="form-select" name="state" aria-label="Default select example" required>
-														<option value="" selected>Selecione seu Estado</option>
-      											<option value="Acre">Acre</option>
-      											<option value="Alagoas">Alagoas</option>
-      											<option value="Amapá">Amapá</option>
-      											<option value="Amazonas">Amazonas</option>
-      											<option value="Bahia">Bahia</option>
-      											<option value="Ceará">Ceará</option>
-      											<option value="Espírito Santo">Espírito Santo</option>
-      											<option value="Goiás">Goiás</option>
-      											<option value="Maranhão">Maranhão</option>
-      											<option value="Mato Grosso">Mato Grosso</option>
-      											<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-      											<option value="Minas Gerais">Minas Gerais</option>
-      											<option value="Pará">Pará</option>
-      											<option value="Paraíba">Paraíba</option>
-      											<option value="Paraná">Paraná</option>
-      											<option value="Pernambuco">Pernambuco</option>
-      											<option value="Piauí">Piauí</option>
-      											<option value="Rio de Janeiro">Rio de Janeiro</option>
-      											<option value="Rio Grande do Norte">Rio Grande do Norte</option>
-      											<option value="Rio Grande do Sul">Rio Grande do Sul</option>
-      											<option value="Rondônia">Rondônia</option>
-      											<option value="Roraima">Roraima</option>
-      											<option value="Santa Catarina">Santa Catarina</option>
-      											<option value="São Paulo">São Paulo</option>
-      											<option value="Sergipe">Sergipe</option>
-      											<option value="Tocantins">Tocantins</option>
-      											<option value="Distrito Federal">Distrito Federal</option>
-      										</select>
+										  <select class="form-select" name="state" aria-label="Default select example" required>
+													<option value="" selected>Selecione o seu Estado</option>
+													<option value="1">Acre</option>
+													<option value="2">Alagoas</option>
+													<option value="3">Amapá</option>
+													<option value="4">Amazonas</option>
+													<option value="5">Bahia</option>
+													<option value="6">Ceará</option>
+													<option value="7">Espírito Santo</option>
+													<option value="8">Goiás</option>
+													<option value="9">Maranhão</option>
+													<option value="10">Mato Grosso</option>
+													<option value="11">Mato Grosso do Sul</option>
+													<option value="12">Minas Gerais</option>
+													<option value="13">Pará</option>
+													<option value="14">Paraíba</option>
+													<option value="15">Paraná</option>
+													<option value="16">Pernambuco</option>
+													<option value="17">Piauí</option>
+													<option value="18">Rio de Janeiro</option>
+													<option value="19">Rio Grande do Norte</option>
+													<option value="20">Rio Grande do Sul</option>
+													<option value="21">Rondônia</option>
+													<option value="22">Roraima</option>
+													<option value="23">Santa Catarina</option>
+													<option value="24">São Paulo</option>
+													<option value="25">Sergipe</option>
+													<option value="26">Tocantins</option>
+													<option value="27">Distrito Federal</option>
+												</select>
 
       									</div>
       								</div>
@@ -122,10 +122,7 @@
       								</div>
       								<div class="row">
       									<div class="form-group col">
-      										<input type="submit" value="Enviar sua Cotação" class="btn btn-primary btn-modern" data-loading-text="Loading...">
-      									</div>
-      									<div class="form-group col">
-      										<a href="#simulador" class="btn btn-primary btn-modern">Fazer Simulação Gratuita</a>
+      										<input type="submit" value="Fazer sua Simulação Gratuita" class="btn btn-primary btn-modern" data-loading-text="Loading...">
       									</div>
       								</div>
       							</form>
@@ -147,8 +144,8 @@
 						<div class="container pt-4">
 							<div class="row align-items-center justify-content-between">
 								<div class="col-lg-4">
-									<h2 class="text-7 font-weight-semibold line-height-2 mb-2">Faça uma simulação e receba cotações das melhores empresas parceiras </h2>
-									<p>Faça uma simulação e tenha uma estimativa de quanto você pode economizar e qual o payback do seu investimento.</p>
+									<h2 class="text-7 font-weight-semibold line-height-2 mb-2">Simulador Solar - Simule sua ECONOMIA </h2>
+									<p>Descubra quanto você pode economizar em sua conta de luz. Preencha o formulário e receba uma simulação do investimento necessário para gerar sua própria energia elétrica.</p>
 								</div>
 								<div class="col-sm-4 col-lg-auto icon-box text-center mb-4">
 									<i class="icon-bg icon-1"></i>
@@ -163,9 +160,9 @@
 									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0">Controle seus<br> Gastos</h4>
 								</div>
 
-								<div class="col-lg-8 offset-lg-4 px-lg-0 text-left">
+								<!-- <div class="col-lg-8 offset-lg-4 px-lg-0 text-left">
 									<p class="text-4">Confira as Melhores Vantagens em Investir em Energia Solar. Faça sua Simulação Gratuita.</p>
-								</div>
+								</div> -->
 							</div>
 
 						</div>
@@ -177,110 +174,100 @@
 					<section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
 					
 						<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #E7BE17;"></div>
-						<div class="container py-5 my-5">
+						<div class="container my-5" style="padding-top: 3rem!important;">
 							<div class="row align-items-center text-center my-5">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<h2 class="font-weight-bold text-9 mb-0 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-appear-animation-duration="750" style="animation-delay: 200ms;">Simulador de Energia Solar</h2>
 									<p class="font-weight-semibold text-primary text-4 fonts-weight-semibold positive-ls-2 mb-3 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" data-appear-animation-duration="750" style="animation-delay: 600ms;">Economize Energia! Descubra o Quanto Você Pode Economizar Investindo em Energia Solar </p>
 									<p class="pb-2 mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" data-appear-animation-duration="750" style="animation-delay: 800ms;">Nós disponibilizamos o simulador de energia solar para você saber como este investimento pode ser rentável em sua cidade, faça sua simulação ou faça sua cotação gratuita para conferir nossos melhores pacotes para o seu estado.</p>
-									<a href="#cotacao" class="btn btn-modern btn-gradient btn-rounded btn-px-5 py-3 text-3 mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000" data-appear-animation-duration="750" style="animation-delay: 1000ms;">Quero Fazer Minha Cotação</a>
+									<a href="#cotacao" class="btn btn-modern btn-gradient btn-rounded btn-px-5 py-3 text-3 mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000" data-appear-animation-duration="750" style="animation-delay: 1000ms;">Quero Fazer Minha Simulação</a>
 								</div>
-								<div class="col-md-6 position-relative py-5" id="simulador">
-
-									<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
-										@csrf
-										<div class="row">
-											<div class="form-group col-lg-12">
-												<input type="text" value="" placeholder="Nome" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required="">
-											</div>
-										</div>
-										<div class="row">
-											<div class="form-group col-lg-6">
-												<input type="text" value="" placeholder="Telefone" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="phone" required="">
-											</div>
-											<div class="form-group col-lg-6">
-												<input type="email" value="" placeholder="E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required="">
-											</div>
-										</div>
-										<div class="row">
-											<div class="form-group col-lg-6">
-
-
-												<select class="form-select" name="state" aria-label="Default select example" required>
-													<option value="" selected>Selecione o seu Estado</option>
-													<option value="1">Acre</option>
-													<option value="2">Alagoas</option>
-													<option value="3">Amapá</option>
-													<option value="4">Amazonas</option>
-													<option value="5">Bahia</option>
-													<option value="6">Ceará</option>
-													<option value="7">Espírito Santo</option>
-													<option value="8">Goiás</option>
-													<option value="9">Maranhão</option>
-													<option value="10">Mato Grosso</option>
-													<option value="11">Mato Grosso do Sul</option>
-													<option value="12">Minas Gerais</option>
-													<option value="13">Pará</option>
-													<option value="14">Paraíba</option>
-													<option value="15">Paraná</option>
-													<option value="16">Pernambuco</option>
-													<option value="17">Piauí</option>
-													<option value="18">Rio de Janeiro</option>
-													<option value="19">Rio Grande do Norte</option>
-													<option value="20">Rio Grande do Sul</option>
-													<option value="21">Rondônia</option>
-													<option value="22">Roraima</option>
-													<option value="23">Santa Catarina</option>
-													<option value="24">São Paulo</option>
-													<option value="25">Sergipe</option>
-													<option value="26">Tocantins</option>
-													<option value="27">Distrito Federal</option>
-												</select>
-
-
-											</div>
-										<div class="form-group col-lg-6">
-												<select class="form-select" name="network_type" aria-label="Default select example" required>
-													<option value="" selected>Tipo da Rede</option>
-													<option value="0">Padrão</option>
-													<option value="1">Monofásico</option>
-													<option value="2">Bifásico</option>
-													<option value="3">Trifásico</option>
-												</select>
-										</div>
-
-
-										<div class="form-group col">
-
-											<select class="form-select" name="local" aria-label="Default select example" required>
-												<option value="" selected >Local</option>
-												<option value="1">Residencial</option>
-												<option value="2">Comercial</option>
-												<option value="3">Industrial</option>
-												<option value="4">Agro</option>
-											</select>
-
-										</div>
-
-											<div class="form-group col-lg-12">
-												<input type="text" value="" placeholder="Valor da Última Conta de Energia" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="price" required="">
-											</div>
-
-									</div>
-										<div class="row">
-											<div class="form-group col">
-												<input type="submit" value="Simulação Gratuita" class="btn btn-primary btn-modern" data-loading-text="Loading...">
-											</div>
-										</div>
-									</form>
-
-
-
-
-								</div>
+							
 							</div>
 						</div>
 					</section>
+
+
+					<section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
+					<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+											<div class="row mx-0">
+												<div class="col-6 col-md-4 p-0">
+													<a href="img/blog/square/blog-13.jpg">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="img/blog/square/blog-13.jpg" class="img-fluid" alt="">
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="img/blog/square/blog-16.jpg">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="img/blog/square/blog-16.jpg" class="img-fluid" alt="">
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="img/blog/square/blog-20.jpg">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="img/blog/square/blog-20.jpg" class="img-fluid" alt="">
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="img/blog/square/blog-23.jpg">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="img/blog/square/blog-23.jpg" class="img-fluid" alt="">
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="img/blog/square/blog-29.jpg">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="img/blog/square/blog-29.jpg" class="img-fluid" alt="">
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+												<div class="col-6 col-md-4 p-0">
+													<a href="img/blog/square/blog-40.jpg">
+														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
+															<span class="thumb-info-wrapper">
+																<img src="img/blog/square/blog-40.jpg" class="img-fluid" alt="">
+																<span class="thumb-info-action">
+																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+																</span>
+															</span>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										</section>
+
+
 
 					<section id="support" class="section section-angled bg-light border-0 m-0 position-relative pt-0">
 						<div class="container pb-5 pt-5 mb-5"  id="por-que-investir">
