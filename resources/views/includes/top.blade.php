@@ -1,7 +1,11 @@
 <?php
 		//UPAR ESSE COMENTADO
+    if(isset($_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/')){
+      $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
+    }else{
+      $pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
+    }
 
-    $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
 
     //$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
 
@@ -33,7 +37,7 @@ $contagem = count($conteudo);
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte[7]}}" ></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte[6]}}" ></a>
                   </div>
                 </div>
               </div>
