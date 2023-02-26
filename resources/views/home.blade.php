@@ -207,8 +207,13 @@ $contagem = count($conteudo);
 											<div class="row mx-0">
 
 											<?php
-											$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
-											//echo $pasta.'<br>';
+											//UPAR ESSE COMENTADO
+
+											$pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
+
+											//$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
+
+
 											$pasta_img = url('/').'/images_full/servicos/';
 
 											//echo $pasta;
