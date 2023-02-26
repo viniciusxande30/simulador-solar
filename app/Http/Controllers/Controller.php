@@ -523,7 +523,7 @@ ul.social li{
         if(isset($_FILES['logo'])){
             $ext = strtolower(substr($_FILES['logo']['name'],-4)); //Pegando extensão do arquivo
             $new_name = 'logotipo'. $ext; //Definindo um novo nome para o arquivo
-            $dir = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/logotipo/'; //Diretório para uploads 
+            $dir = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/logotipo/'; //Diretório para uploads 
             move_uploaded_file($_FILES['logo']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
             echo("Imagen enviada com sucesso!");
         }else{
