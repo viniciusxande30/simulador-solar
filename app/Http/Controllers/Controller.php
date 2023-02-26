@@ -469,4 +469,91 @@ ul.social li{
   public function quotationSend(){
     return view('quotation-send');
   }
+  public function dash(){
+    return view('dash');
+  }
+  public function dashEnvio(){
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                   
+        function get_data() {
+            $name = $_POST['name'];
+            $file_name='json_archives'. '.json';
+       
+            if(file_exists("$file_name")) { 
+                $current_data=file_get_contents("$file_name");
+                unset($file_name);
+                $array_data=json_decode($current_data, true);
+                                   
+                $extra=array(
+                    'Name' => $_POST['name'],
+                    'Email' => $_POST['email'],
+                    'Phone' => $_POST['phone'],
+                    'Color' => $_POST['color'],
+                );
+                $array_data[]=$extra;
+                echo "file exist<br/>";
+                return json_encode($array_data);
+            }
+            else {
+                $datae=array();
+                $datae[]=array(
+                    'Name' => $_POST['name'],
+                    'Email' => $_POST['email'],
+                    'Phone' => $_POST['phone']
+                );
+                echo "file not exist<br/>";
+                return json_encode($datae);   
+            }
+        }
+      
+        $file_name='json_archives'. '.json';
+          
+        if(file_put_contents("$file_name", get_data())) {
+            echo 'success';
+        }                
+        else {
+            echo 'There is some error';                
+        }
+    }
+
+//echo $_SERVER["DOCUMENT_ROOT"].'\SIMULADOR_SOLAR\SIMULADOR_SOLAR\public\images_full\logotipo';
+//echo url('/');
+
+
+        if(isset($_FILES['logo'])){
+            $ext = strtolower(substr($_FILES['logo']['name'],-4)); //Pegando extensão do arquivo
+            $new_name = 'logotipo'. $ext; //Definindo um novo nome para o arquivo
+            $dir = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/logotipo/'; //Diretório para uploads 
+            move_uploaded_file($_FILES['logo']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
+            echo("Imagen enviada com sucesso!");
+        }else{
+            echo 'Erro';
+        }
+
+        //diretório para salvar as imagens
+        $diretorio = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
+        //Verificar a existência do diretório para salvar as imagens e informa se o caminho é um diretório
+        if(!is_dir($diretorio)){ 
+            echo "Pasta $diretorio nao existe";
+        }else{    
+            $arquivo = isset($_FILES['arquivo']) ? $_FILES['arquivo'] : FALSE;
+        
+            //loop para ler as imagens
+            for ($controle = 0; $controle < count($arquivo['name']); $controle++){      
+                $destino = $diretorio."/".$controle.strtolower(substr($arquivo['name'][$controle],-4));
+                //realizar o upload da imagem em php
+                //move_uploaded_file — Move um arquivo enviado para uma nova localização
+                if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)){
+                    echo "Upload realizado com sucesso<br>"; 
+                }else{
+                    echo "Erro ao realizar upload";
+                }        
+            }
+        }
+
+
+
+
+
+    }
 }

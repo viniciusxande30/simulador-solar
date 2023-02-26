@@ -6,7 +6,7 @@
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img alt="Porto" width="200" data-sticky-width="82" data-sticky-height="40" data-sticky-top="0" src="img/umtudoso.webp"></a>
+                    <a href="{{url('/')}}"><img alt="" width="200" data-sticky-width="82" data-sticky-height="40" data-sticky-top="0" src="{{url('/')}}/images_full/logotipo/logotipo.webp"></a>
                   </div>
                 </div>
               </div>

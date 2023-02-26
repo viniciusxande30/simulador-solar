@@ -1,4 +1,6 @@
+
 @include('includes.header')
+
 @include('includes.top')
 
 <section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
@@ -13,7 +15,7 @@
 								</div>
 								<div class="col-md-6 position-relative py-5" id="simulador">
 
-									<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
+									<form class="contact-form" action="{{url('/')}}/dash/dash-envio" method="POST" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px" enctype="multipart/form-data">
 										@csrf
 										<div class="row">
 											<div class="form-group col-lg-12">
@@ -28,18 +30,30 @@
 												<input type="email" value="" placeholder="E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required="">
 											</div>
 										</div>
-										<div class="row">
-									
-
-
+                                        <div class="row">
 											<div class="form-group col-lg-12">
-												<input type="text" value="" placeholder="Valor da Última Conta de Energia" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="price" required="">
+												<input type="text" value="" placeholder="Cor padrão / Hexadecimal" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="color" required="">
 											</div>
+                                        <div class="row">
 
+											<div class="form-group col-lg-6">
+                                                <input type="file" class="form-control text-3 h-auto py-2" name="logo" accept="image/*">  
+                                            </div>  
+                                            <div class="form-group col-lg-6">
+                                                <input type="file" class="form-control text-3 h-auto py-2" name="arquivo[]" multiple="multiple" accept="image/*">  
+                                            </div>  
+										</div>
+										<div class="col-12">
+									<ul>
+                                
+                                    </ul>
+
+
+										
 									</div>
 										<div class="row">
 											<div class="form-group col">
-												<input type="submit" value="Simulação Gratuita" class="btn btn-primary btn-modern" data-loading-text="Loading...">
+												<input type="submit" value="Enviar" class="btn btn-primary btn-modern" data-loading-text="Loading...">
 											</div>
 										</div>
 									</form>
@@ -53,3 +67,19 @@
 					</section>
                  
                     @include('includes.footer')
+
+                    <x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
+
+    <!-- <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <x-jet-welcome />
+            </div>
+        </div>
+    </div> -->
+</x-app-layout>
