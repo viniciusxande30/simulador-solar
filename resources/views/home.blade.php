@@ -1,6 +1,19 @@
 @include('includes.header')
 @include('includes.top')
 
+@php
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+$json = file_get_contents(url('/').'/json_archives.json', false, stream_context_create($arrContextOptions));
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+//$conteudo[$contagem-1]->Name;
+@endphp
+
 
       			<div role="main" class="main" id="cotacao">
       					<section class="section section-concept section-no-border section-dark section-angled section-angled-reverse pt-5 m-0" id="section-concept" style="background-image: url(img/landing/header-1.jpg); background-size: cover; background-position: center; animation-duration: 750ms; animation-delay: 300ms; animation-fill-mode: forwards;">
@@ -14,12 +27,7 @@
 
       								<div class="col-lg-6" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
       							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Faça sua Cotação Gratuita!</h2>
-      							<p class="mb-4">Faça sua Cotação Cotação Totalmente Gratuita</p>
-<<<<<<< HEAD
-<!-- Subir Arquivos teste -->
-=======
-<!-- Subir Arquivos -->
->>>>>>> 0ee6cac56b3718cdb5a8ab4e316c51af3a0f12f2
+      							<p class="mb-4" style="color:{{$conteudo[$contagem-1]->Color;}}">Faça sua Cotação Cotação Totalmente Gratuita com a {{$conteudo[$contagem-1]->Name;}}</p>
       							<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST">
                       @csrf
       								<div class="row">
@@ -122,11 +130,13 @@
 												<input  type ="checkbox" name="terms" value="Termo_Aceito" required>
 												<label>Eu concordo em receber comunicações. Ao informar meus dados, eu concordo com a <a href="https://umtudoso.com.br/politica-de-privacidade/" target="_BLANK">Política de Privacidade.</a> </label>
 											</div>
+											<input  type ="hidden" name="email_origin" value="{{$conteudo[$contagem-1]->Email}}">
+
 
       								</div>
       								<div class="row">
       									<div class="form-group col">
-      										<input type="submit" value="Fazer sua Simulação Gratuita" class="btn btn-primary btn-modern" data-loading-text="Loading...">
+      										<input type="submit" value="Fazer sua Simulação Gratuita" class="btn btn-primary btn-modern" style="color: white;background-color:{{$conteudo[$contagem-1]->Color}} !important"  data-loading-text="Loading...">
       									</div>
       								</div>
       							</form>
@@ -152,16 +162,16 @@
 									<p>Descubra quanto você pode economizar em sua conta de luz. Preencha o formulário e receba uma simulação do investimento necessário para gerar sua própria energia elétrica.</p>
 								</div>
 								<div class="col-sm-4 col-lg-auto icon-box text-center mb-4">
-									<i class="icon-bg icon-1"></i>
-									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0">Otimize seu Custo<br> com Energia<br></h4>
+									<i class="icon-bg icon-1" style="color: {{$conteudo[$contagem-1]->Color}}"></i>
+									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0" style="color: {{$conteudo[$contagem-1]->Color}}">Otimize seu Custo<br> com Energia<br></h4>
 								</div>
 								<div class="col-sm-4 col-lg-auto icon-box text-center mb-4">
-									<i class="icon-bg icon-2"></i>
-									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0">Invista em<br> Energia Limpa</h4>
+									<i class="icon-bg icon-2" style="color: {{$conteudo[$contagem-1]->Color}}"></i>
+									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0" style="color: {{$conteudo[$contagem-1]->Color}}">Invista em<br> Energia Limpa</h4>
 								</div>
 								<div class="col-sm-4 col-lg-auto icon-box text-center mb-4">
-									<i class="icon-bg icon-3"></i>
-									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0">Controle seus<br> Gastos</h4>
+									<i class="icon-bg icon-3" style="color: {{$conteudo[$contagem-1]->Color}}"></i>
+									<h4 class="font-weight-bold custom-font-size-2 line-height-3 mb-0" style="color: {{$conteudo[$contagem-1]->Color}}">Controle seus<br> Gastos</h4>
 								</div>
 
 								<!-- <div class="col-lg-8 offset-lg-4 px-lg-0 text-left">
@@ -177,12 +187,12 @@
 
 					<section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
 					
-						<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: #E7BE17;"></div>
+						<div class="section-angled-layer-top section-angled-layer-increase-angle" style="padding: 5rem 0; background-color: {{$conteudo[$contagem-1]->Color}}"></div>
 						<div class="container my-5" style="padding-top: 3rem!important;">
 							<div class="row align-items-center text-center my-5">
 								<div class="col-md-12">
 									<h2 class="font-weight-bold text-9 mb-0 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-appear-animation-duration="750" style="animation-delay: 200ms;">Simulador de Energia Solar</h2>
-									<p class="font-weight-semibold text-primary text-4 fonts-weight-semibold positive-ls-2 mb-3 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" data-appear-animation-duration="750" style="animation-delay: 600ms;">Economize Energia! Descubra o Quanto Você Pode Economizar Investindo em Energia Solar </p>
+									<p class="font-weight-semibold text-primary text-4 fonts-weight-semibold positive-ls-2 mb-3 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" data-appear-animation-duration="750" style="animation-delay: 600ms; color:{{$conteudo[$contagem-1]->Color}} !important" >Economize Energia! Descubra o Quanto Você Pode Economizar Investindo em Energia Solar </p>
 									<p class="pb-2 mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" data-appear-animation-duration="750" style="animation-delay: 800ms;">Nós disponibilizamos o simulador de energia solar para você saber como este investimento pode ser rentável em sua cidade, faça sua simulação ou faça sua cotação gratuita para conferir nossos melhores pacotes para o seu estado.</p>
 									<a href="#cotacao" class="btn btn-modern btn-gradient btn-rounded btn-px-5 py-3 text-3 mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000" data-appear-animation-duration="750" style="animation-delay: 1000ms;">Quero Fazer Minha Simulação</a>
 								</div>
@@ -195,11 +205,34 @@
 					<section class="section section-no-border section-angled bg-color-light-scale-1 m-0">
 					<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
 											<div class="row mx-0">
+
+											<?php
+											$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
+											//echo $pasta.'<br>';
+											$pasta_img = url('/').'/images_full/servicos/';
+
+											//echo $pasta;
+											$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+
+
+											//echo $arquivos[0];
+											//echo "Total de Imagens" . count($arquivos);
+											
+											foreach($arquivos as $img){
+
+												$parte = explode("/", $img);
+												//echo $parte[8];
+												
+												//echo $img;
+											?>
+											<!-- <img src="{{url('/')}}/images_full/servicos/{{$parte[8]}}">; -->
+										
+
 												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-13.jpg">
+													<a href="{{url('/')}}/images_full/servicos/{{$parte[8]}}">
 														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
 															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-13.jpg" class="img-fluid" alt="">
+																<img src="{{url('/')}}/images_full/servicos/{{$parte[8]}} " class="img-fluid" alt="">
 																<span class="thumb-info-action">
 																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
 																</span>
@@ -207,66 +240,9 @@
 														</span>
 													</a>
 												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-16.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-16.jpg" class="img-fluid" alt="">
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-20.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-20.jpg" class="img-fluid" alt="">
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-23.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-23.jpg" class="img-fluid" alt="">
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-29.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-29.jpg" class="img-fluid" alt="">
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
-												<div class="col-6 col-md-4 p-0">
-													<a href="img/blog/square/blog-40.jpg">
-														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
-															<span class="thumb-info-wrapper">
-																<img src="img/blog/square/blog-40.jpg" class="img-fluid" alt="">
-																<span class="thumb-info-action">
-																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
-																</span>
-															</span>
-														</span>
-													</a>
-												</div>
+											<?php
+											}
+											?>
 											</div>
 										</div>
 										</section>
@@ -278,19 +254,19 @@
 							<div class="row align-items-center mb-5">
 								<div class="col-lg-6 pe-xl-5 mb-5 mb-lg-0">
 									<h2 class="font-weight-bold text-9 mb-1">Economize muito mais com Energia Solar</h2>
-									<h5 class="font-weight-semibold positive-ls-2 text-4 text-primary mb-3">Gere sua Própria Energia, Instale sua Energia Solar</h5>
+									<h5 class="font-weight-semibold positive-ls-2 text-4 text-primary mb-3" style="color:{{$conteudo[$contagem-1]->Color}} !important">Gere sua Própria Energia, Instale sua Energia Solar</h5>
 									<p class="ls-0 text-default fw-400 mb-5">Adquira o Retorno sobre o seu Investimento em Poucos Anos</p>
 									<div class="d-flex align-items-center border border-top-0 border-end-0 border-start-0 pb-4 mb-4">
-										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"></i>
-										<p class="mb-0"><b class="text-color-dark">Energia Limpa - </b>Sua Própria Energia de um Jeito Mais Sustentável</p>
+										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3" style="color:{{$conteudo[$contagem-1]->Color}} !important"></i>
+										<p class="mb-0"><b class="text-color-dark" style="color:{{$conteudo[$contagem-1]->Color}} !important">Energia Limpa - </b>Sua Própria Energia de um Jeito Mais Sustentável</p>
 									</div>
 									<div class="d-flex align-items-center border border-top-0 border-end-0 border-start-0 pb-4 mb-4">
-										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"></i>
-										<p class="mb-0 mb-0"><b class="text-color-dark">Investimento Compatível com o Mercado -</b> Faça seu Investimento com os Melhores Preços</p>
+										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3" style="color:{{$conteudo[$contagem-1]->Color}} !important"></i>
+										<p class="mb-0 mb-0"><b class="text-color-dark" style="color:{{$conteudo[$contagem-1]->Color}} !important">Investimento Compatível com o Mercado -</b> Faça seu Investimento com os Melhores Preços</p>
 									</div>
 									<div class="d-flex align-items-center pb-4 mb-4">
-										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3"></i>
-										<p class="mb-0"><b class="text-color-dark">Qualidade e Suporte -</b> Suporte Personalizado para Você</p>
+										<i class="fa fa-check text-color-primary bg-light rounded-circle box-shadow-4 p-2 me-3" style="color:{{$conteudo[$contagem-1]->Color}} !important"></i>
+										<p class="mb-0"><b class="text-color-dark" style="color:{{$conteudo[$contagem-1]->Color}} !important">Qualidade e Suporte -</b> Suporte Personalizado para Você</p>
 									</div>
 								</div>
 								<div class="col-lg-4 offset-lg-2 position-relative">

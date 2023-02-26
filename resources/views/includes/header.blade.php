@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html style="scroll-behavior: smooth;">
+
+@php
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+$json = file_get_contents(url('/').'/json_archives.json', false, stream_context_create($arrContextOptions));
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+//$conteudo[$contagem-1]->Name;
+@endphp
+
 	<head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Simulador de Energia Solar | Um Tudo Só Comunicação</title>
+		<title>Simulador de Energia Solar | {{$conteudo[$contagem-1]->Name}}</title>
 
 		<meta name="keywords" content="WebSite Template" />
 		<meta name="description" content="Simulador de Energia Solar | Um Tudo Só Comunicação">
@@ -47,6 +61,10 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
+
+
+
+
 
   <body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 0, 'effect': 'pulse'}">
     <div class="loading-overlay">

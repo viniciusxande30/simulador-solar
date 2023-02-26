@@ -1,12 +1,25 @@
+@php
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+$json = file_get_contents(url('/').'/json_archives.json', false, stream_context_create($arrContextOptions));
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+//$conteudo[$contagem-1]->Name;
+@endphp
+
 <section class="section bg-color-dark-scale-2 border-0 m-0 py-4">
   <div class="container">
     <div class="row">
       <div class="col">
         <ul class="list list-unstyled list-inline d-flex align-items-center justify-content-center flex-column flex-lg-row mb-0">
           <li class="list-inline-item custom-text-color-1 color-inherit mb-lg-0 text-2 pe-2">Alguns de Nossos Links</li>
-          <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}" style="background-color:#E7BE17" class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0">Página Inicial</a></li>
-          <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}/#por-que-investir" style="background-color:#E7BE17"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0">Por que Investir?</a></li>
-		  <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}/#simulador" style="background-color:#E7BE17"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0">Faça Sua Simulação</a></li>
+          <li class="list-inline-item mb-lg-0" ><a href="{{url('/')}}" style="backgrund-color:{{$conteudo[$contagem-1]->Color}} !important" class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0">Página Inicial</a></li>
+          <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}/#por-que-investir" style="background-color:{{$conteudo[$contagem-1]->Color}} !important"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0">Por que Investir?</a></li>
+		  <li class="list-inline-item mb-lg-0"><a href="{{url('/')}}/#simulador" style="background-color:{{$conteudo[$contagem-1]->Color}} !important"  class="btn btn-dark btn-modern btn-rounded btn-px-4 py-3 border-0">Faça Sua Simulação</a></li>
         </ul>
       </div>
     </div>
@@ -23,7 +36,7 @@
 				</div>
 				<div class="copyright bg-dark py-4">
 					<div class="container text-center py-2">
-						<p class="mb-0 text-2">Copyright 2023 Um Tudo Só - Todos os Direitos Reservados</p>
+						<p class="mb-0 text-2">Copyright 2023 {{$conteudo[$contagem-1]->Name}} - Todos os Direitos Reservados</p>
 					</div>
 				</div>
 			</footer>

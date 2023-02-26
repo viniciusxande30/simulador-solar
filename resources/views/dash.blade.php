@@ -37,9 +37,11 @@
                                         <div class="row">
 
 											<div class="form-group col-lg-6">
+                                            <label>Tam. 1024px X 245px</label>
                                                 <input type="file" class="form-control text-3 h-auto py-2" name="logo" accept="image/*">  
                                             </div>  
                                             <div class="form-group col-lg-6">
+                                                <label>Tam. 700px X 700px</label>
                                                 <input type="file" class="form-control text-3 h-auto py-2" name="arquivo[]" multiple="multiple" accept="image/*">  
                                             </div>  
 										</div>

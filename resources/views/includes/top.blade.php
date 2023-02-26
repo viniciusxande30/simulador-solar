@@ -1,12 +1,34 @@
+<?php
+		$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/logotipo/';
+
+		//echo $pasta;
+		$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+    $parte = explode("/", $arquivos[0]);
+    //echo $parte[8];
+    
+?>
+@php
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+$json = file_get_contents(url('/').'/json_archives.json', false, stream_context_create($arrContextOptions));
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+//$conteudo[$contagem-1]->Name;
+@endphp
+    
     <div class="body">
-      <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickyChangeLogo': false, 'stickyHeaderContainerHeight': 70}">
-        <div class="header-body border-top-0 bg-dark box-shadow-none">
+      <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 70, 'stickyChangeLogo': false, 'stickyHeaderContainerHeight': 70}" >
+        <div class="header-body border-top-0 bg-dark box-shadow-none" >
           <div class="header-container container-fluid">
             <div class="header-row p-relative px-0">
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img alt="" width="200" data-sticky-width="82" data-sticky-height="40" data-sticky-top="0" src="{{url('/')}}/images_full/logotipo/logotipo.webp"></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/{{$parte[8]}}" ></a>
                   </div>
                 </div>
               </div>
