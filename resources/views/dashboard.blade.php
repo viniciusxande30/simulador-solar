@@ -1,7 +1,7 @@
 
 @include('includes.header')
 
-<link rel="stylesheet" href="<?php echo url('/');?>/build/app.32ff9cdf.css">
+<link rel="stylesheet" href="<?php echo url('/');?>/public/build/assets/app.32ff9cdf.css">
 
 
 <x-app-layout>
@@ -74,7 +74,8 @@
 							</div>
 						</div>
 					</section>
-                 
+					<script src="{{url('/')}}/public/build/assets/app.2896b7a8.js"></script>
+
                     @include('includes.footer')
 
 
