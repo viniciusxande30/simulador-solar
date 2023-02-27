@@ -1,4 +1,7 @@
+
 <x-guest-layout>
+<link rel="stylesheet" href="<?php echo url('/');?>/build/app.32ff9cdf.css">
+
     <x-jet-authentication-card>
         <!-- <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -44,5 +47,7 @@
                 </x-jet-button>
             </div>
         </form>
+        <script src="{{url('/')}}/build/app.2896b7a8.js"></script>
+
     </x-jet-authentication-card>
 </x-guest-layout>

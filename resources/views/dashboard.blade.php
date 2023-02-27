@@ -1,5 +1,9 @@
 
 @include('includes.header')
+
+<link rel="stylesheet" href="<?php echo url('/');?>/build/app.32ff9cdf.css">
+
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
