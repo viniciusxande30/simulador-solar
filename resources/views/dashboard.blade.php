@@ -40,7 +40,7 @@
                                         <div class="row">
 
 											<div class="form-group col-lg-12">
-                                            <label>Logotipo Tam. 1024px X 245px - Somente PNG</label>
+                                            <label>Logotipo Tam. 250px X 60px - Somente PNG</label>
                                                 <input type="file" class="form-control text-3 h-auto py-2" name="logo" accept="image/*">  
                                             </div>  
                                             <div class="form-group col-lg-12">
