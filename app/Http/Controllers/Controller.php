@@ -566,8 +566,8 @@ ul.social li{
             foreach($arquivos as $img){
 
             $parte = explode("/", $img);
-            echo $parte[8].' Serviços Deletados com Sucesso';
-            unlink($pasta.$parte[8]);
+            echo $parte[7].' Serviços Deletados com Sucesso';
+            unlink($pasta.$parte[7]);
         }
                 
         }catch(Exception $e){
@@ -584,8 +584,8 @@ public function deleteLogo(){
         foreach($arquivos as $img){
 
         $parte = explode("/", $img);
-        echo $pasta.$parte[8].'Logotipo Deletado com Sucesso';
-        unlink($pasta.$parte[8]);
+        echo $pasta.$parte[7].'Logotipo Deletado com Sucesso';
+        unlink($pasta.$parte[7]);
     }
             
     }catch(Exception $e){
