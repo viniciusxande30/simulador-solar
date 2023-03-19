@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -554,9 +555,47 @@ ul.social li{
             }
         }
 
+    }
 
 
+    public function deleteServices(){
+        try{
+            $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
+            $arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+
+            foreach($arquivos as $img){
+
+            $parte = explode("/", $img);
+            echo $parte[8].' Serviços Deletados com Sucesso';
+            unlink($pasta.$parte[8]);
+        }
+                
+        }catch(Exception $e){
+            echo"Arquivos Não Deletados";
+
+
+        }
+}
+public function deleteLogo(){
+    try{
+        $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/logotipo/';
+        $arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+
+        foreach($arquivos as $img){
+
+        $parte = explode("/", $img);
+        echo $pasta.$parte[8].'Logotipo Deletado com Sucesso';
+        unlink($pasta.$parte[8]);
+    }
+            
+    }catch(Exception $e){
+        echo"Arquivos Não Deletados";
 
 
     }
+    return redirect()->route('home');
+
+}
+
+
 }

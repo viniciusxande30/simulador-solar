@@ -208,7 +208,7 @@ $contagem = count($conteudo);
 
 											<?php
 											//UPAR ESSE COMENTADO
-
+													
 											$pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
 
 											//$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
@@ -233,10 +233,10 @@ $contagem = count($conteudo);
 										
 
 												<div class="col-6 col-md-4 p-0">
-													<a href="{{url('/')}}/images_full/servicos/{{$parte[7]}}">
+													<a href="{{url('/')}}/images_full/servicos/<?php try {echo $parte[8];} catch(Exception $e){echo $parte[7];}?>">
 														<span class="thumb-info thumb-info-no-borders thumb-info-centered-icons">
 															<span class="thumb-info-wrapper">
-																<img src="{{url('/')}}/images_full/servicos/{{$parte[7]}} " class="img-fluid" alt="">
+																<img src="{{url('/')}}/images_full/servicos/<?php try {echo $parte[8];} catch(Exception $e){echo $parte[7];}?> " class="img-fluid" alt="">
 																<span class="thumb-info-action">
 																	<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
 																</span>

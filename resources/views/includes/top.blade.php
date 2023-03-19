@@ -1,20 +1,30 @@
 <?php
 		//UPAR ESSE COMENTADO
+    try{
+      $pasta_logo = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/logotipo/';
+      $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+      $parte_logo = explode("/", $arquivos[0]);
+      
+    }catch(Exception $e){
+      $pasta_logo = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/exceptions/';
+      $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+      $parte_logo = explode("/", $arquivos[0]);
+    }
     
-    $pasta = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/servicos/';
-    $pasta_logo = $_SERVER['DOCUMENT_ROOT'].'/public/images_full/logotipo/';
+
+
+    
 
     //$pasta = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/servicos/';
 
 
 		//echo $pasta;
-		$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
+		//$arquivos = glob("$pasta{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
     //$parte = explode("/", $arquivos[0]);
-      $parte_logo = explode("/", $arquivos[0]);
-      //echo $parte_logo;
+    //$parte_logo = explode("/", $arquivos[0]);
+    //echo $parte_logo;
 
-    $arquivos = glob("$pasta_logo{*.jpg,*.JPG,*.png,*.gif,*.bmp,*.webp}", GLOB_BRACE);
-      $parte_logo = explode("/", $arquivos[0]);
+
       //echo $parte_logo[7];
     //echo $parte[8];
     
@@ -40,7 +50,7 @@ $contagem = count($conteudo);
               <div class="header-column px-lg-3">
                 <div class="header-row">
                   <div class="header-logo">
-                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/<?php try {echo $parte_logo[7];} catch(Exception $e){echo $parte_logo[8];}?>" style="width:250px" ></a>
+                    <a href="{{url('/')}}"><img src="{{url('/')}}/images_full/logotipo/<?php try {echo $parte_logo[8];} catch(Exception $e){echo $parte_logo[7];}?>" style="width:250px" ></a>
                   </div>
                 </div>
               </div>

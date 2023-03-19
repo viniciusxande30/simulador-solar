@@ -61,12 +61,20 @@
 										
 									</div>
 										<div class="row">
-											<div class="form-group col">
+											<div class="form-group col-4">
 												<input type="submit" value="Enviar" class="btn btn-primary btn-modern" data-loading-text="Loading...">
 											</div>
 										</div>
 									</form>
-
+									<div class="row">
+										<h2>Deletar Arquivos</h2>
+									<div class="form-group col-6">
+												<a href="{{url('/')}}/dash/delete-services" class="btn btn-danger btn-modern col-12">Deletar Serviços</a>
+											</div>
+											<div class="form-group col-6">
+												<a href="{{url('/')}}/dash/delete-logo" class="btn btn-danger btn-modern col-12">Deletar Logotipo</a>
+											</div>
+									</div>
 
 
 
