@@ -37,7 +37,15 @@ Route::get('/dash', [Controller::class, 'dash'])->name('dash');
 Route::get('dash/delete-services', [Controller::class, 'deleteServices'])->name('deleteServices');
 Route::get('dash/delete-logo', [Controller::class, 'deleteLogo'])->name('deleteLogo');
 
+Route::get('dash/kw', [Controller::class, 'kw'])->name('kw');
+Route::post('dash/kw-edit', [Controller::class, 'kwEdit'])->name('kwEdit');
+
+//Route::get('dash/kw-edit', [Controller::class, 'kwEdit'])->name('kwEdit');
+
+
 Route::post('dash/dash-envio', [Controller::class, 'dashEnvio'])->name('dashEnvio');
+
+
 
 
 Route::middleware([

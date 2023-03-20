@@ -596,6 +596,29 @@ public function deleteLogo(){
     return redirect()->route('home');
 
 }
+public function kw(){
+    return view('kw');
+}
+public function kwEdit(){
+
+  
+    $json = file_get_contents(url('/').'/json_kw.json');
+    $data = json_decode($json, true);
+    //$data[0]['activity_name'] = "TENNIS";
+
+// or if you want to change all entries with activity_code "1"
+foreach ($data as $key => $entry) {
+    if ($entry['estado'] == $_POST['state']) {
+        $data[$key]['kw'] = floatval($_POST['kw']);
+    }
+}
+$json = json_encode($data);
+file_put_contents('json_kw.json', $json);
+
+
+
+
+}
 
 
 }

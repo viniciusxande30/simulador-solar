@@ -1,6 +1,12 @@
 @include('includes.header')
 @include('includes.top')
 <?php
+$json = file_get_contents(url('/').'/json_kw.json');
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+echo $conteudo[1];
+
+
 $taxas = [
 	0=>45,
 	1=>55,
