@@ -1,10 +1,10 @@
 @include('includes.header')
 @include('includes.top')
 <?php
-// $json = file_get_contents(url('/').'/json_kw.json');
-// $conteudo = json_decode($json);
-// $contagem = count($conteudo);
-// echo $conteudo[1];
+$json = file_get_contents(url('/').'/json_kw.json');
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+//echo $conteudo[0]->kw;
 
 
 $taxas = [
@@ -18,34 +18,34 @@ $taxas = [
 $irradiacao_solar_media = 4.48;
 $placa_padrao = 405;
 $media_kw =[
-  0 => 0,
-  1 => 0.73,
-  2 => 0.75,
-  3 => 0.83,
-  4 => 0.72,
-  5 => 0.74,
-  6 => 0.70,
-  7 => 0.76,
-  8 => 0.71,
-  9 => 0.67,
-  10 => 0.65,
-  11 => 0.69,
-  12 => 0.80,
-  13 => 0.81,
-  14 => 0.87,
-  15 => 0.56,
-  16 => 0.70,
-  17 => 0.74,
-  18 => 0.57,
-  19 => 1.03,
-  20 => 0.66,
-  21=> 0.65,
-  22=> 0.73,
-  23 => 0.64,
-  24 => 0.62,
-  25 => 0.73,
-  26 => 0.70,
-  27 => 0.69
+  0 => $conteudo[0]->kw,
+  1 => $conteudo[1]->kw,
+  2 => $conteudo[2]->kw,
+  3 => $conteudo[3]->kw,
+  4 => $conteudo[4]->kw,
+  5 => $conteudo[5]->kw,
+  6 => $conteudo[6]->kw,
+  7 => $conteudo[7]->kw,
+  8 => $conteudo[8]->kw,
+  9 => $conteudo[9]->kw,
+  10 => $conteudo[10]->kw,
+  11 => $conteudo[11]->kw,
+  12 => $conteudo[12]->kw,
+  13 => $conteudo[13]->kw,
+  14 => $conteudo[14]->kw,
+  15 => $conteudo[15]->kw,
+  16 => $conteudo[16]->kw,
+  17 => $conteudo[17]->kw,
+  18 => $conteudo[18]->kw,
+  19 => $conteudo[19]->kw,
+  20 => $conteudo[20]->kw,
+  21=> $conteudo[21]->kw,
+  22=> $conteudo[22]->kw,
+  23 => $conteudo[23]->kw,
+  24 => $conteudo[24]->kw,
+  25 => $conteudo[25]->kw,
+  26 => $conteudo[26]->kw,
+  27 => $conteudo[27]->kw
 ];
 $tipo_da_rede =[
   0 => 0,

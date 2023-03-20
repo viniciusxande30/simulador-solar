@@ -1,6 +1,12 @@
 @include('includes.header')
 @include('includes.top')
 
+@php
+$json = file_get_contents(url('/').'/json_kw.json');
+$conteudo = json_decode($json);
+$contagem = count($conteudo);
+//echo $conteudo[0]->kw;
+@endphp
 
 <div role="main" class="main" id="cotacao">
       					<section class="section section-concept section-no-border section-dark section-angled section-angled-reverse pt-5 m-0" id="section-concept" style="background-image: url(img/landing/header-1.jpg); background-size: cover; background-position: center; animation-duration: 750ms; animation-delay: 300ms; animation-fill-mode: forwards;">
@@ -79,5 +85,24 @@
       						</div>
       					</section>
 
+                          <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Estado</th>
+      <th scope="col">KW Atual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php for($i=0;$i< count($conteudo);$i++){ ?>
+    <tr>
+      <th scope="row">{{$i}}</th>
+      <td>{{$i}}</td>
+      <td>{{$conteudo[$i]->kw}}</td>
+    </tr>
+    <?php } ?>
+    
+  </tbody>
+</table>
 
 @include('includes.footer')
