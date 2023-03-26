@@ -35,13 +35,29 @@ class Controller extends BaseController
     //         ->from('rsfreelas@gmail.com')
     //         ->subject('Teste de Email');
     // });
-        $html='Teste de E-mail';
+    //$html='Teste de E-mail';
     // $html = '<b>Nova Simulação de Energia Solar</b><br>'.'Nome: '.$_POST['name'].'<br>Telefone: '.$_POST['phone'].'<br>E-mail : '.$_POST['email'].'<br>Estado : '.$_POST['state'].'<br>Tipo de Rede : '.$_POST['network_type'].'<br>Local : '.$_POST['local'].'<br>Preço : '.$_POST['price'];
-    Mail::raw('<b>Nova Simulação de Energia Solar</b><br>'.'Nome: '.$_POST['name'].'<br>Telefone: '.$_POST['phone'].'<br>E-mail : '.$_POST['email'].'<br>Estado : '.$_POST['state'].'<br>Tipo de Rede : '.$_POST['network_type'].'<br>Local : '.$_POST['local'].'<br>Preço : '.$_POST['price'], function ($message){
+    
+    
+    
+    Mail::raw('Nova Simulação de Energia Solar'.'Nome: '.$_POST['name'].' - Telefone: '.$_POST['phone'].'- E-mail : '.$_POST['email'].'- Estado : '.$_POST['state'].'- Tipo de Rede : '.$_POST['network_type'].'- Local : '.$_POST['local'].'- Preço : '.$_POST['price'], function ($message){
             $message->to($_POST['email_origin'])
         ->subject('Nova Simulação')
         ->from('comercial@rsweb.com.br');
     });
+
+        // $html = '<b>Nova Simulação de Energia Solar</b><br>'.'Nome: '.$_POST['name'].'<br>Telefone: '.$_POST['phone'].'<br>E-mail : '.$_POST['email'].'<br>Estado : '.$_POST['state'].'<br>Tipo de Rede : '.$_POST['network_type'].'<br>Local : '.$_POST['local'].'<br>Preço : '.$_POST['price'];
+
+
+        // $html = '<b>Teste Aplicação</b>';
+        // Mail::send([],[],function ($message){
+        //             $message->to('rsfreelas@gmail.com')
+        //         ->subject('Teste App')
+        //         ->from('comercial@rsweb.com.br')
+        //         ->setBody('<h1>Olá,novo email para você</h1>', 'text/html');
+        // });
+
+
 
       return view('result',$data);
 
