@@ -30,8 +30,21 @@ class Controller extends BaseController
         'price'=>$_POST['price'],
       ];
 
-      return view('result',$data);
+      Mail::raw('Hello world', function ($message) {
+        $message->to('rsfreelas@gmail.com')
+            ->from('vinicius.xande30@gmail.com')
+            ->subject('Teste de Email');
+    });
 
+    // $html = '<b>My email</b>';
+    // Mail::send([], [], function (Message $message) use ($html) {
+    //         $message->to('vinicius.xande30@gmail.com')
+    //     ->subject('my subject')
+    //     ->from('rsfreelas@email.com')
+    //     ->setBody($html, 'text/html');
+    // });
+
+      return view('result',$data);
 
 
 

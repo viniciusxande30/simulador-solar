@@ -18,7 +18,7 @@ $contagem = count($conteudo);
       								</div>
 
       								<div class="col-lg-6" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
-      							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Faça sua Simulação de Energia Solar</h2>
+      							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Atualize as Taxas de KW Médio dos Estados</h2>
       							<form class="contact-form" action="{{url('/')}}/dash/kw-edit" method="POST">
                       @csrf
       								
