@@ -30,19 +30,19 @@ class Controller extends BaseController
         'price'=>$_POST['price'],
       ];
 
-      Mail::raw('Hello world', function ($message) {
-        $message->to('rsfreelas@gmail.com')
-            ->from('rsfreelas@gmail.com')
-            ->subject('Teste de Email');
-    });
-
-    // $html = '<b>My email</b>';
-    // Mail::send([], [], function (Message $message) use ($html) {
-    //         $message->to('vinicius.xande30@gmail.com')
-    //     ->subject('my subject')
-    //     ->from('rsfreelas@email.com')
-    //     ->setBody($html, 'text/html');
+    //   Mail::raw('Hello world', function ($message) {
+    //     $message->to('rsfreelas@gmail.com')
+    //         ->from('rsfreelas@gmail.com')
+    //         ->subject('Teste de Email');
     // });
+
+    $html = '<b>Nova Simulação de Energia Solar</b><br>'.'Nome: '.$_POST['name'].'<br>Telefone: '.$_POST['phone'].'<br>E-mail : '.$_POST['email'].'<br>Estado : '.$_POST['state'].'<br>Tipo de Rede : '.$_POST['network_type'].'<br>Local : '.$_POST['local'].'<br>Preço : '.$_POST['price'];
+    Mail::send([], [], function (Message $message) use ($html) {
+            $message->to($_POST['email_origin'])
+        ->subject('Nova Simulação')
+        ->from('comercial@rsweb.com.br')
+        ->setBody($html, 'text/html');
+    });
 
       return view('result',$data);
 
