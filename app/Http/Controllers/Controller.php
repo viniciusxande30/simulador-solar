@@ -32,7 +32,7 @@ class Controller extends BaseController
 
       Mail::raw('Hello world', function ($message) {
         $message->to('rsfreelas@gmail.com')
-            ->from('vinicius.xande30@gmail.com')
+            ->from('rsfreelas@gmail.com')
             ->subject('Teste de Email');
     });
 
