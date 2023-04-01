@@ -170,6 +170,7 @@ class Controller extends BaseController
             //$dir = $_SERVER['DOCUMENT_ROOT'].'/SIMULADOR_SOLAR/SIMULADOR_SOLAR/public/images_full/logotipo/'; //Diretório para uploads 
             move_uploaded_file($_FILES['logo']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
             echo("Imagen enviada com sucesso!");
+            return redirect()->route('quotationSend');
         }else{
             echo 'Erro';
         }
@@ -190,7 +191,7 @@ class Controller extends BaseController
                 //realizar o upload da imagem em php
                 //move_uploaded_file — Move um arquivo enviado para uma nova localização
                 if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)){
-                    echo "Upload realizado com sucesso<br>"; 
+                    return redirect()->route('quotationSend');
                 }else{
                     echo "Erro ao realizar upload";
                 }        
@@ -210,6 +211,8 @@ class Controller extends BaseController
             $parte = explode("/", $img);
             echo $parte[7].' Serviços Deletados com Sucesso';
             unlink($pasta.$parte[7]);
+            return redirect()->route('quotationSend');
+
         }
                 
         }catch(Exception $e){
@@ -228,6 +231,8 @@ public function deleteLogo(){
         $parte = explode("/", $img);
         echo $pasta.$parte[7].'Logotipo Deletado com Sucesso';
         unlink($pasta.$parte[7]);
+        return redirect()->route('quotationSend');
+
     }
             
     }catch(Exception $e){
