@@ -22,6 +22,7 @@ class Controller extends BaseController
     public function result(){
       $data  = [
         'name'=>$_POST['name'],
+        'company'=>$_POST['company'],
         'phone'=>$_POST['phone'],
         'email'=>$_POST['email'],
         'state'=>$_POST['state'],
@@ -41,8 +42,8 @@ class Controller extends BaseController
     
     
     Mail::raw('Nova Simulação de Energia Solar'.'Nome: '.$_POST['name'].' - Telefone: '.$_POST['phone'].'- E-mail : '.$_POST['email'].'- Estado : '.$_POST['state'].'- Tipo de Rede : '.$_POST['network_type'].'- Local : '.$_POST['local'].'- Preço : '.$_POST['price'], function ($message){
-            $message->to($_POST['email_origin'])
-        ->subject('Nova Simulação')
+            $message->to($_POST['email_origin'],'comercial@umtudoso.com.br')
+        ->subject('Nova Simulação para'.$_POST['company'])
         ->from('comercial@rsweb.com.br');
     });
 

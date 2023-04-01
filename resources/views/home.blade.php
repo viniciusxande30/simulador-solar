@@ -30,6 +30,7 @@ $contagem = count($conteudo);
       							<p class="mb-4" style="color:{{$conteudo[$contagem-1]->Color;}}">Simule sua ECONOMIA com a {{$conteudo[$contagem-1]->Name;}}</p>
       							<form class="contact-form" action="{{url('/')}}/enviar-simulacao" method="POST">
                       @csrf
+				<input type="hidden" value="{{$conteudo[$contagem-1]->Name;}}" name="company">
       								<div class="row">
       									<div class="form-group col-lg-12">
       										<input type="text" value="" placeholder="Digite seu Nome" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required="">
