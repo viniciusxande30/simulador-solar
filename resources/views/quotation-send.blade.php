@@ -1,6 +1,7 @@
 @include('includes.header')
 @include('includes.top')
 
+
 <div role="main" class="main" id="cotacao">
       					<section class="section section-concept section-no-border section-dark section-angled section-angled-reverse pt-5 m-0" id="section-concept" style="background-image: url(img/landing/header-1.jpg); background-size: cover; background-position: center; animation-duration: 750ms; animation-delay: 300ms; animation-fill-mode: forwards;">
       						<div class="section-angled-layer-bottom bg-light" style="padding: 8rem 0;"></div>
@@ -12,8 +13,8 @@
       								</div>
 
       								<div class="col-lg-6" style="background-color:white;box-shadow: 2px 2px 2px #ced4da;border-radius:20px;padding:50px">
-      							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Cotação Realizada com Sucesso!</h2>
-      							<p class="mb-4" style="color:black">Em breve nossa equipe entrará em contato</p>
+      							<h2 class="font-weight-bold text-8 mt-2 mb-0" style="color:black">Requisição Realizada com Sucesso!</h2>
+      							<p class="mb-4" style="color:black">Volte para a Página Inicial e Veja suas Alterações</p>
                                   <div class="form-group col">
       										<a href="{{url('/')}}" class="btn btn-primary btn-modern">Voltar para a Página Inicial</a>
       									</div>

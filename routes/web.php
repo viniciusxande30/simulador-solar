@@ -30,10 +30,10 @@ Route::get('/', [Controller::class, 'home'])->name('home');
 // });
 
 Route::get('/resultado', [Controller::class, 'result'])->name('result');
-Route::get('/cotacao-enviada', [Controller::class, 'quotationSend'])->name('quotationSend');
+Route::get('/concluido', [Controller::class, 'quotationSend'])->name('quotationSend');
 Route::post('/enviar-simulacao', [Controller::class, 'result'])->name('result');
 Route::post('/enviar-cotacao', [Controller::class, 'cotacao'])->name('cotacao');
-Route::get('/dash', [Controller::class, 'dash'])->name('dash');
+//Route::get('/dash', [Controller::class, 'dash'])->name('dash');
 Route::get('dash/delete-services', [Controller::class, 'deleteServices'])->name('deleteServices');
 Route::get('dash/delete-logo', [Controller::class, 'deleteLogo'])->name('deleteLogo');
 
