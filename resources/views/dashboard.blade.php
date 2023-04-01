@@ -68,11 +68,14 @@
 									</form>
 									<div class="row">
 										<h2>Deletar Arquivos</h2>
-									<div class="form-group col-6">
+									<div class="form-group col-4">
 												<a href="{{url('/')}}/dash/delete-services" class="btn btn-danger btn-modern col-12">Deletar Serviços</a>
 											</div>
-											<div class="form-group col-6">
+											<div class="form-group col-4">
 												<a href="{{url('/')}}/dash/delete-logo" class="btn btn-danger btn-modern col-12">Deletar Logotipo</a>
+											</div>
+											<div class="form-group col-4">
+												<a href="{{url('/')}}/dash/kw" class="btn btn-danger btn-modern col-12">Atualizar KW</a>
 											</div>
 									</div>
 

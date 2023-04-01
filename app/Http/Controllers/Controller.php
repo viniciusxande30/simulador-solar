@@ -261,7 +261,7 @@ foreach ($data as $key => $entry) {
 }
 $json = json_encode($data);
 file_put_contents('json_kw.json', $json);
-
+return redirect()->route('quotationSend');
 
 
 

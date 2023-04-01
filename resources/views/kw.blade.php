@@ -6,6 +6,36 @@ $json = file_get_contents(url('/').'/json_kw.json');
 $conteudo = json_decode($json);
 $contagem = count($conteudo);
 //echo $conteudo[0]->kw;
+$cities = 
+	[	0 =>0,
+		1 =>'Acre',
+		2 =>'Alagoas',
+		3 =>'Amapá',
+		4 =>'Amazonas',
+		5 =>'Bahia',
+		6 =>'Ceará',
+		7 =>'Espírito Santo',
+		8 =>'Goiás',
+		9 =>'Maranhão',
+		10 =>'Mato Grosso',
+		11 =>'Mato Grosso do Sul',
+		12 =>'Minas Gerais',
+		13 =>'Pará',
+		14 =>'Paraíba',
+		15 =>'Paraná',
+		16 =>'Pernambuco',
+		17 =>'Piauí',
+		18 =>'Rio de Janeiro',
+		19 =>'Rio Grande do Norte',
+		20 =>'Rio Grande do Sul',
+		21 =>'Rondônia',
+		22 =>'Roraima',
+		23 =>'Santa Catarina',
+		24 =>'São Paulo',
+		25 =>'Sergipe',
+		26 =>'Tocantins',
+		27 =>'Distrito Federal',
+	];
 @endphp
 
 <div role="main" class="main" id="cotacao">
@@ -94,10 +124,10 @@ $contagem = count($conteudo);
     </tr>
   </thead>
   <tbody>
-    <?php for($i=0;$i< count($conteudo);$i++){ ?>
+    <?php for($i=1;$i< count($conteudo);$i++){ ?>
     <tr>
       <th scope="row">{{$i}}</th>
-      <td>{{$i}}</td>
+      <td>{{$cities[$i]}}</td>
       <td>{{$conteudo[$i]->kw}}</td>
     </tr>
     <?php } ?>
