@@ -190,12 +190,13 @@ class Controller extends BaseController
                 //realizar o upload da imagem em php
                 //move_uploaded_file — Move um arquivo enviado para uma nova localização
                 if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)){
-                    return redirect()->route('quotationSend');
+                    echo"Enviada com Sucesso";
                 }else{
                     echo "Erro ao realizar upload";
                 }        
             }
-        }
+        }return redirect()->route('quotationSend');
+
 
     }
 
