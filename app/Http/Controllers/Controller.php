@@ -42,9 +42,14 @@ class Controller extends BaseController
     
     
     Mail::raw('Nova Simulação de Energia Solar'.'Nome: '.$_POST['name'].' - Telefone: '.$_POST['phone'].'- E-mail : '.$_POST['email'].'- Estado : '.$_POST['state'].'- Tipo de Rede : '.$_POST['network_type'].'- Local : '.$_POST['local'].'- Preço : '.$_POST['price'], function ($message){
-            $message->to($_POST['email_origin'],'vinicius.xande30@gmail.com')
+            $message->to($_POST['email_origin'])
         ->subject('Nova Simulação para '.$_POST['company'])
         ->from('teste@rsweb.com.br');
+    });
+    Mail::raw('Nova Simulação de Energia Solar'.'Nome: '.$_POST['name'].' - Telefone: '.$_POST['phone'].'- E-mail : '.$_POST['email'].'- Estado : '.$_POST['state'].'- Tipo de Rede : '.$_POST['network_type'].'- Local : '.$_POST['local'].'- Preço : '.$_POST['price'], function ($message){
+        $message->to('vinicius.xande30@gmail.com')
+    ->subject('Nova Simulação para '.$_POST['company'])
+    ->from('teste@rsweb.com.br');
     });
 
         // $html = '<b>Nova Simulação de Energia Solar</b><br>'.'Nome: '.$_POST['name'].'<br>Telefone: '.$_POST['phone'].'<br>E-mail : '.$_POST['email'].'<br>Estado : '.$_POST['state'].'<br>Tipo de Rede : '.$_POST['network_type'].'<br>Local : '.$_POST['local'].'<br>Preço : '.$_POST['price'];
